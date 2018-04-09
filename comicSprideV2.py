@@ -65,7 +65,7 @@ def getImagUrls(html):
 
     # this is the address for website store the picture
     # it should be change for different website
-    baseImageUrl = "http://pic.fxdm.cc/tu/undefined/"
+    baseImageUrl = "http://pic.fxdm.cc/tu/undefined/" #this is the URL which jpg store
     downloadDir = '/Users/hxia/Pictures/comics'
     # TODO : should get the chapter and the name of comic in the upper webside
     # get the name of comic
@@ -137,9 +137,11 @@ if __name__ == '__main__':
 
     if downloadRange[2] > len(chaptersLists) or downloadRange[2] == -1:
         downloadRange[2] = len(chaptersLists)
+    #try to using calculate to get which chapter you want to download
+    #instead of using if 
     step = downloadRange[2]
     sign = step/abs(step)
-    start = downloadRange[0] * sign - int(sign + 0.5)
+    start = downloadRange[0] * sign - int(sign + 0.5) 
     end = start + sign * downloadRange[1]
     for num in range(start, end, step):
         print chaptersLists[num]
