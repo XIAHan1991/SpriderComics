@@ -1,4 +1,5 @@
 # SprideForComics
+Version 1.0.0
 this is a programe can sprider comics from the http://www.omanhua.com/comic
 Using python 2.7.8
 Libary (urllib, urllib2, re, time, os) 
